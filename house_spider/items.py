@@ -9,10 +9,17 @@ import scrapy
 
 class DmozItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    name = scrapy.Field()
     title = scrapy.Field()
     link = scrapy.Field()
     desc = scrapy.Field()
 
 class FangddItem(DmozItem):
-	pass
+	price = scrapy.Field()
+	address = scrapy.Field()
+	region = scrapy.Field()
+	style = scrapy.Field()
+	time_open = scrapy.Field()
+	time_end = scrapy.Field()
+	areaList = scrapy.Field()
+	decoration = scrapy.Field()

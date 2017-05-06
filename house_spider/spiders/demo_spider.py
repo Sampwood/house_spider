@@ -25,14 +25,3 @@ class DmozSpider(scrapy.spiders.Spider):
             item['link'] = sel.xpath('a/@href').extract()
             item['desc'] = sel.xpath('text()').extract()
             yield item
-
-class houseSpider(scrapy.spiders.Spider):
-    name = "fangdd"
-    allowed_domains = ["fangdd.com"]
-    start_urls = ["http://www.fangdd.com/"]
-
-    def parse(self, response):
-        filename = "fangdd.html"
-        with open(filename, 'wb') as f:
-            f.write(response.body)
-            
